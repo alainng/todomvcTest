@@ -11,4 +11,4 @@ Requirements
 Testing
 ------------
 1. Start Webdriver: webdriver-manager start
-2. Run tests from todomvc folder: webdriver-manager start
+2. Run tests from todomvc folder: protractor conf.js

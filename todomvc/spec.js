@@ -27,7 +27,7 @@ describe('TODOS Spec', function() {
         xButtonElem.click();
     }
   
-    function editTodo(index,newTodoTitle){ //tested
+    function editTodo(index,newTodoTitle){
         var todoElem = element.all(by.css('[ng-dblclick="editTodo(todo)"]')).get(index)
         browser.actions().doubleClick(todoElem).perform();
         var textInputElem = element.all(by.model("todo.title")).get(index)
@@ -75,11 +75,6 @@ describe('TODOS Spec', function() {
         browser.executeScript('window.sessionStorage.clear();');
         browser.executeScript('window.localStorage.clear();');
     });
-    
-    afterAll(function(){
-        
-    });
-  
   
     it('adds a todo', function() {   
         addTodo("testTodo!@#$%!#3123%^#")  
@@ -156,8 +151,7 @@ describe('TODOS Spec', function() {
         editTodo(0,"")
         expectTodoCount(0)
     });
- 
-  
+   
     it('can toggle all todos to completed', function() {   
         addTodo("hehehehe")
         addTodo("hehehehe") 
@@ -181,6 +175,5 @@ describe('TODOS Spec', function() {
         switchView("active")
         expectTodoCount(3)
     });
-  
  
 });

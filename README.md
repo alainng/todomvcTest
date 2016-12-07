@@ -12,3 +12,7 @@ Testing
 ------------
 1. Start Webdriver: webdriver-manager start
 2. Run tests from todomvc folder: protractor conf.js
+
+TODO
+------------
+1. multicaps for multiple browser support

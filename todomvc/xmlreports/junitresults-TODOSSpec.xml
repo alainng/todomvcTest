@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="TODOS Spec" timestamp="2016-12-07T13:10:30" hostname="localhost" time="12.736" errors="0" tests="10" skipped="0" failures="0">
+  <testcase classname="TODOS Spec" name="adds a todo" time="0.766">
+  </testcase>
+  <testcase classname="TODOS Spec" name="toggles the first todo from active to completed by clicking the circle on the left of the todo" time="1.449">
+  </testcase>
+  <testcase classname="TODOS Spec" name="toggles the first todo from completed back to active by clicking the circle on the left of the todo" time="1.974">
+  </testcase>
+  <testcase classname="TODOS Spec" name="can clear completed todos" time="1.057">
+  </testcase>
+  <testcase classname="TODOS Spec" name="deletes the first todo by clicking the X on the right of the todo" time="0.645">
+  </testcase>
+  <testcase classname="TODOS Spec" name="edit the first todo and saves the changes" time="1.457">
+  </testcase>
+  <testcase classname="TODOS Spec" name="edits the first todo and cancels the edit" time="0.94">
+  </testcase>
+  <testcase classname="TODOS Spec" name="edits the first todo to &amp;quot;&amp;quot; resulting in deleting the todo" time="0.895">
+  </testcase>
+  <testcase classname="TODOS Spec" name="can toggle all todos to completed" time="1.208">
+  </testcase>
+  <testcase classname="TODOS Spec" name="can toggle all todos from completed to active" time="1.72">
+  </testcase>
+ </testsuite>
+</testsuites>

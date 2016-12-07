@@ -1,9 +1,9 @@
 describe('TODOS Spec', function() {
     
-    function addTodo(todo_label) { //tested
-        element(by.model('newTodo')).sendKeys(todo_label,protractor.Key.ENTER);
+    function addTodo(newTodoTitle) { 
+        element(by.model('newTodo')).sendKeys(newTodoTitle,protractor.Key.ENTER);
     }
-    function toggleTodo(index){ //tested
+    function toggleTodo(index){ 
         element.all(by.model('todo.completed')).get(index).click()
     }
   
@@ -11,15 +11,15 @@ describe('TODOS Spec', function() {
         element(by.id('toggle-all')).click()
     }
   
-    function expectTodoCount(number){ //tested
+    function expectTodoCount(number){
         expect(element.all(by.repeater('todo in todos | filter:statusFilter track by $index')).count()).toEqual(number)
     }
   
-    function clearCompleted(){ //tested
+    function clearCompleted(){ 
         element(by.id("clear-completed")).click()
     }
   
-    function deleteTodo(index){ //tested
+    function deleteTodo(index){
         browser.waitForAngular();
         var todoElem = element.all(by.model('todo.completed')).get(index)
         browser.actions().mouseMove(todoElem).perform(); //hover to show x
@@ -35,7 +35,7 @@ describe('TODOS Spec', function() {
         textInputElem.sendKeys(protractor.Key.BACK_SPACE)
         textInputElem.sendKeys(newTodoTitle,protractor.Key.ENTER)
     }
-    function editTodoAndCancel(index,newTodoTitle){ //tested
+    function editTodoAndCancel(index,newTodoTitle){ 
         var todoElem = element.all(by.css('[ng-dblclick="editTodo(todo)"]')).get(index)
         browser.actions().doubleClick(todoElem).perform();
         var textInputElem = element.all(by.model("todo.title")).get(index)

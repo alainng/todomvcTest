@@ -81,6 +81,11 @@ describe('TODOS Spec', function() {
         expect(getElementText(0)).toBe("testTodo!@#$%!#3123%^#")
         expectTodoCount(1)
     });
+    
+    it('does not add empty named todos', function() {   
+        addTodo("")  
+        expectTodoCount(0)
+    });
 
     it('toggles the first todo from active to completed by clicking the circle on the left of the todo', function() {   
         addTodo("hehehehe") 
